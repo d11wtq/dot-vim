@@ -16,5 +16,7 @@ git submodule update
 
 cd -
 
-echo "Almost Done!! Just open vim and run :BundleInstall"
+echo "Opening vim to install plugins"
+vim -u ~/.vim/installrc
 
+echo "All Done"

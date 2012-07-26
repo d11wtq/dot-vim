@@ -8,9 +8,16 @@ Vim, with just a few customizations for Ruby and PHP development.
 
 You need at least Vim 7.2, and you'll need git installed.
 
-The easy solution is to now run:
+### The no-brainer installation
+
+The easy solution is to just run:
 
     -bash$  ~/.vim/install.sh
+
+This will make the needed symlinks and briefly open and close vim to install
+the plugins.
+
+### The manual installation
 
 However, if you don't feel comfortable using a shell script, the manual
 steps are simple:
