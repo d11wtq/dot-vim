@@ -12,6 +12,7 @@ You need at least Vim 7.2, and you'll need git installed.
 
 The easy solution is to just run:
 
+    -bash$  git clone git://github.com/d11wtq/dot-vim.git ~/.vim
     -bash$  ~/.vim/install.sh
 
 This will make the needed symlinks and briefly open and close vim to install
