@@ -114,7 +114,9 @@ syntax on
 set laststatus=2
 
 " customize status line components
-set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
+if exists("fugitive#statusline()")
+  set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
+endif
 
 " opening a file any buffer uses the pwd for that file
 set autochdir
