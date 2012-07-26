@@ -124,7 +124,7 @@ set autoread
 
 " purdy colors
 set background=dark
-colorscheme mustang
+silent! colorscheme mustang
 
 " C-c usually by-passes the InsertLeave event
 inoremap <C-c> <ESC>
