@@ -113,11 +113,6 @@ syntax on
 " always show the status line
 set laststatus=2
 
-" customize status line components
-if exists("fugitive#statusline()")
-  set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
-endif
-
 " opening a file any buffer uses the pwd for that file
 set autochdir
 
@@ -128,6 +123,14 @@ set autoread
 set background=dark
 silent! colorscheme mustang
 
+" customize status line components to include git repo info
+if exists("fugitive#statusline()")
+  set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
+endif
+
+" set the leader key to ';' (easy to type)
+let mapleader = ";"
+
 " C-c usually by-passes the InsertLeave event
 inoremap <C-c> <ESC>
 
@@ -137,6 +140,19 @@ vnoremap / /\v
 
 " provide a shortcut to FuzzyFinder
 nnoremap <C-f> :FufFile ./<CR>
+
+" Toggles between two open buffers, like :b#, but respecting closed buffers
+" FIXME: Extract this to a plugin
+function! BufToggle()
+  if bufloaded(bufname("#")) " respect closed buffers
+    execute "buffer " . bufname("#")
+  else
+    execute "bprev"
+  endif
+endfunction
+
+" ;b toggles between two buffers
+nnoremap <Leader>b :call BufToggle()<CR>
 
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
