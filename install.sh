@@ -17,6 +17,6 @@ git submodule update
 cd -
 
 echo "Opening vim to install plugins"
-vim -u ~/.vim/installrc
+vim -u ~/.vim/installerrc
 
 echo "All Done"
