@@ -15,7 +15,8 @@ The easy solution is to just run:
     -bash$  ~/.vim/install.sh
 
 This will make the needed symlinks and briefly open and close vim to install
-the plugins.
+the plugins. Don't worry if Vim looks all messed up when the script opens it;
+it's just running the `:BundleInstall` command and then going to exit anyway.
 
 ### The manual installation
 
