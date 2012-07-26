@@ -52,14 +52,27 @@ Vundle manages updating of plugins, via git.  Just run:
 
 ## Further customizations
 
-If you don't intend to keep updating this configuration from my own git repo,
-you can just hack on the .vimrc that you symlinked. If you want to
-periodically `git pull` and get any changes I make, it is best to avoid editing
-the same .vimrc directly, however.
+While you could edit ~/.vimrc directly, this would hinder the ease with which
+changes to this repository can be fetched and merged. This configuration also
+looks at ~/.vim/customrc, if it exists. You can add your own settings here.
+It is loaded after ~/.vimrc, so you may override my settings too.
 
-This configuration also looks at ~/.vim/customrc, if it exists.  You can add
-your own settings here.  It is loaded after ~/.vimrc, so you may override my
-settings too.
+## What's Included?
+
+  - Tim Pope's 'vim-ruby' and 'vim-rails' plugins
+  - Tobias Schlitt's 'vip' plugin (for PHP)
+  - Eric Van Dewoestine's 'supertab' (TAB key autocompletion in insert mode)
+  - Tim Pope's 'vim-fugitive' plugin, for showing what git branch you're on
+  - FuzzyFinder, for quickly opening/filtering files (use <C-f>)
+  - Regexp search uses 'sane' regex by default (i.e. the \v flag)
+  - Status bar goes bright orange in insert mode
+  - Highlights trailing whitespace as you type
+  - Pressing `<Leader>b` (by default `;b`) toggles between two open buffers
+  - Automatically adds a blank line to the end of files
+  - The 'mustang' theme, though 'solarized' is also installed
+  - All backup files/swap files are disabled (warning!)
+  - Default indentation is set to use two spaces
+  - External changes to files in open buffers are loaded without prompting
 
 ## Disclaimer
 
