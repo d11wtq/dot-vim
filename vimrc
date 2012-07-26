@@ -148,3 +148,5 @@ augroup hi_statusline
   autocmd InsertLeave * hi StatusLine ctermbg=238 ctermfg=253
 augroup END
 
+" finally, load any further, ad-hoc customizations
+silent! so ~/.vim/customrc

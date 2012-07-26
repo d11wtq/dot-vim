@@ -28,8 +28,8 @@ installed, but you just install them using Vundle from inside of Vim:
 
 Vundle will clone and register all the specified plugins (into ~/.vim/bundle/).
 
-If you want the color scheme to take effect, either quit and restart Vim, or
-re-source the .vimrc:
+If you want the color scheme and git status line to take effect, either quit
+and restart Vim, or re-source the .vimrc:
 
     :so ~/.vimrc
 
