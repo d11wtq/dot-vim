@@ -138,8 +138,13 @@ inoremap <C-c> <ESC>
 nnoremap / /\v
 vnoremap / /\v
 
-" provide a shortcut to FuzzyFinder
+" turn highlighting back off easily
+nnoremap <Leader>/ :noh<CR>
+vnoremap <Leader>/ :noh<CR>
+
+" provide shortcuts to FuzzyFinder
 nnoremap <C-f> :FufFile ./<CR>
+nnoremap <C-b> :FufBuffer<CR>
 
 " Toggles between two open buffers, like :b#, but respecting closed buffers
 " FIXME: Extract this to a plugin
