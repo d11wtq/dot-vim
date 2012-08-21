@@ -44,8 +44,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fugitive'
 
 " quick open files
-Bundle 'L9'
-Bundle 'FuzzyFinder'
+Bundle 'kien/ctrlp.vim'
 
 " show current line and col in status bar
 set ruler
