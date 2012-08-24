@@ -67,7 +67,8 @@ It is loaded after ~/.vimrc, so you may override my settings too.
   - Regexp search uses 'sane' regex by default (i.e. the \v flag)
   - Status bar goes bright orange in insert mode
   - Highlights trailing whitespace as you type
-  - Pressing `<Leader>b` (by default `;b`) toggles between two open buffers
+  - The ctrlp plugin to quickly open files and buffers (`<C-b>` opens it in buffer mode)
+  - Use `<C-b><CR>` to toggle between two open buffers
   - Automatically adds a blank line to the end of files
   - The 'mustang' theme, though 'solarized' is also installed
   - All backup files/swap files are disabled (warning!)

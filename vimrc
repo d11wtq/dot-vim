@@ -141,22 +141,11 @@ vnoremap / /\v
 nnoremap <Leader>/ :noh<CR>
 vnoremap <Leader>/ :noh<CR>
 
-" provide shortcuts to FuzzyFinder
-nnoremap <C-f> :FufFile ./<CR>
-nnoremap <C-b> :FufBuffer<CR>
+" bring up the buffer selection menu in ctrlp
+nnoremap <C-b> :CtrlPBuffer<CR>
 
-" Toggles between two open buffers, like :b#, but respecting closed buffers
-" FIXME: Extract this to a plugin
-function! BufToggle()
-  if bufloaded(bufname("#")) " respect closed buffers
-    execute "buffer " . bufname("#")
-  else
-    execute "bprev"
-  endif
-endfunction
-
-" ;b toggles between two buffers
-nnoremap <Leader>b :call BufToggle()<CR>
+" clear the ctrlp cache and open ctrlp
+nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
