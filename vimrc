@@ -141,6 +141,9 @@ vnoremap / /\v
 nnoremap <Leader>/ :noh<CR>
 vnoremap <Leader>/ :noh<CR>
 
+" bring up the file selection menu in ctrlp
+nnoremap <C-f> :CtrlP<CR>
+
 " bring up the buffer selection menu in ctrlp
 nnoremap <C-b> :CtrlPBuffer<CR>
 
