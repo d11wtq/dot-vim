@@ -150,6 +150,9 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 " clear the ctrlp cache and open ctrlp
 nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
+" ctrlp doesn't show dotfiles by default
+let g:ctrlp_show_hidden = 1
+
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
 
