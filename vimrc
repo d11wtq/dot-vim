@@ -130,16 +130,15 @@ endif
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
 
-" C-c usually by-passes the InsertLeave event
+" C-c in insert mode usually by-passes the InsertLeave event
 inoremap <C-c> <ESC>
+
+" C-c turns off any highlighted matches, then acts as normal
+nnoremap <C-c> :noh<CR><C-c>
 
 " make vim's regex interpretation friendlier (see :h pattern)
 nnoremap / /\v
 vnoremap / /\v
-
-" turn highlighting back off easily
-nnoremap <Leader>/ :noh<CR>
-vnoremap <Leader>/ :noh<CR>
 
 " bring up the file selection menu in ctrlp
 nnoremap <C-f> :CtrlP<CR>
