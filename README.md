@@ -4,6 +4,62 @@ This is my personal Vim configuration, which is mostly managed with
 [Vundle](https://github.com/gmarik/vundle/).  I like to run a fairly minimal
 Vim, with just a few customizations for Ruby and PHP development.
 
+## Key Niceties
+
+### Plugins
+
+Some plugins are installed, but not very many. Supertab and CtrlP are by far
+the most useful.
+
+### Theme
+
+A few are installed, but Mustang is the theme that is turned on by default.
+
+![Mustang](http://i.stack.imgur.com/vZXfV.png)
+
+### Mappings
+
+The leader key is ";". In practice I don't use leader commands much.
+
+**Ctrl-C**
+
+In normal mode, Ctrl-C clears any highlighted searches, if any are displayed,
+before actually executing the usual Ctrl-C (i.e. it's overloaded, not masked).
+
+In insert mode, Ctrl-C acts like the Escape key. In some terminals Vim waits
+a second or so when pressing Escape. Using Ctrl-C has an instant effect.
+
+**Ctrl-O (Visual Block)**
+
+When in Visual Block mode, hitting Ctrl-O "opens" the selected region. This
+is useful for indenting columns in the middle of a document. It works just
+like Emacs `open-rectangle`.
+
+![Before](http://i.stack.imgur.com/LywJK.png)
+![After](http://i.stack.imgur.com/wxi2x.png)
+
+**Ctrl-B**
+
+Pressing Ctrl-B opens CtrlP in buffer list mode. This is the same as pressing
+Ctrl-P then Ctrl-B.
+
+**Ctrl-@**
+
+Pressing Ctrl-@ (Ctrl-Shift-2) clears CtrlP's cache and opens CtrlP.
+
+### Backup files
+
+All backup/swap files are turned off. Be warned.
+
+### Status bar
+
+When in insert mode the status bar is turned orange. When in normal mode, it
+is just white. I'd love to also have it turn yellow or green if the current
+buffer is changed (i.e. marked with a "[+]").
+
+![Insert Mode](http://i.stack.imgur.com/davKX.png)
+![Normal Mode](http://i.stack.imgur.com/Ua8T6.png)
+
 ## Installation Instructions
 
 You need at least Vim 7.2, and you'll need git installed.
@@ -49,31 +105,6 @@ Vundle manages updating of plugins, via git.  Just run:
     :BundleInstall!
 
 (With that bang! at the end)
-
-## Further customizations
-
-While you could edit ~/.vimrc directly, this would hinder the ease with which
-changes to this repository can be fetched and merged. This configuration also
-looks at ~/.vim/customrc, if it exists. You can add your own settings here.
-It is loaded after ~/.vimrc, so you may override my settings too.
-
-## What's Included?
-
-  - Tim Pope's 'vim-ruby' and 'vim-rails' plugins
-  - Tobias Schlitt's 'vip' plugin (for PHP)
-  - Eric Van Dewoestine's 'supertab' (TAB key autocompletion in insert mode)
-  - Tim Pope's 'vim-fugitive' plugin, for showing what git branch you're on
-  - FuzzyFinder, for quickly opening/filtering files (use <C-f>)
-  - Regexp search uses 'sane' regex by default (i.e. the \v flag)
-  - Status bar goes bright orange in insert mode
-  - Highlights trailing whitespace as you type
-  - The ctrlp plugin to quickly open files and buffers (`<C-b>` opens it in buffer mode)
-  - Use `<C-b><CR>` to toggle between two open buffers
-  - Automatically adds a blank line to the end of files
-  - The 'mustang' theme, though 'solarized' is also installed
-  - All backup files/swap files are disabled (warning!)
-  - Default indentation is set to use two spaces
-  - External changes to files in open buffers are loaded without prompting
 
 ## Disclaimer
 
