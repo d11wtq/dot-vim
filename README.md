@@ -36,6 +36,7 @@ is useful for indenting columns in the middle of a document. It works just
 like Emacs `open-rectangle`.
 
 ![Before](http://i.stack.imgur.com/LywJK.png)
+->
 ![After](http://i.stack.imgur.com/wxi2x.png)
 
 **Ctrl-B**
