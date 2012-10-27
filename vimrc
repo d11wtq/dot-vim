@@ -140,6 +140,9 @@ nnoremap <C-c> :noh<CR><C-c>
 nnoremap / /\v
 vnoremap / /\v
 
+" select a block and hit C-o to open that block with spaces
+vnoremap <C-o> yPgvr<Space>
+
 " bring up the file selection menu in ctrlp
 nnoremap <C-f> :CtrlP<CR>
 
