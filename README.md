@@ -11,15 +11,16 @@ Vim, with just a few customizations for Ruby and PHP development.
 Some plugins are installed, but not very many. Supertab and CtrlP are by far
 the most useful.
 
-### Theme
+### Color Theme
 
-A few are installed, but Mustang is the theme that is turned on by default.
+Mustang is the theme that is turned on by default. It doesn't over-use color,
+has good contrast and is easy on the eyes.
 
 ![Mustang](http://i.imgur.com/a2moY.png)
 
 ### Mappings
 
-The leader key is `";"`. In practice I don't use leader commands much.
+The leader key is `";"`. In practice I don't use leader mappings much.
 
 **Enter**
 
