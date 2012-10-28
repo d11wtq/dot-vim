@@ -94,7 +94,7 @@ filetype plugin indent on
 " spaces, not tabs
 set expandtab
 
-" not sure, will check
+" tabs are drawn as 2 spaces
 set shiftwidth=2
 
 " soft tabs are 2 spaces
@@ -124,11 +124,6 @@ set ttimeoutlen=10
 " purdy colors
 set background=dark
 silent! colorscheme mustang
-
-" customize status line components to include git repo info
-if exists("fugitive#statusline()")
-  set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
-endif
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
@@ -169,6 +164,10 @@ function! UpdateStatusLine(...)
     else
       highlight StatusLine ctermbg=238 ctermfg=253 guibg=#D4D4D4  guifg=#666666
     endif
+  endif
+
+  if exists("*fugitive#statusline")
+    set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
   endif
 endfunction
 
