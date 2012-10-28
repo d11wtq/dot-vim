@@ -161,12 +161,13 @@ let g:omni_sql_no_default_maps = 1
 " change status line color depending on the state of the buffer
 function! UpdateStatusLine(...)
   if a:0 && a:1 == "i"
-    highlight StatusLine ctermbg=15  ctermfg=9
+    highlight StatusLine ctermbg=15  ctermfg=9 guibg=#EF4E56  guifg=#FAFAFA
+
   else
     if &l:modified
-      highlight StatusLine ctermbg=15 ctermfg=32
+      highlight StatusLine ctermbg=15 ctermfg=32 guibg=#0190D4  guifg=#FAFAFA
     else
-      highlight StatusLine ctermbg=238 ctermfg=253
+      highlight StatusLine ctermbg=238 ctermfg=253 guibg=#D4D4D4  guifg=#666666
     endif
   endif
 endfunction
@@ -176,6 +177,11 @@ augroup hi_statusline
   autocmd InsertEnter * call UpdateStatusLine("i")
   autocmd InsertLeave,CursorMoved,BufWritePost * call UpdateStatusLine()
 augroup END
+
+" turn off the toolbar in macvim
+if has("gui_running")
+  set guioptions=egmrt
+endif
 
 " finally, load any further, ad-hoc customizations
 silent! so ~/.vim/customrc
