@@ -31,9 +31,6 @@ Bundle 'ervandew/supertab'
 " erb support and the likes
 Bundle 'tpope/vim-rails'
 
-" solarized color theme
-Bundle 'altercation/vim-colors-solarized'
-
 " mustang theme
 Bundle 'croaker/mustang-vim'
 
