@@ -121,8 +121,8 @@ set autochdir
 " instead of prompting to load changed file, just load it
 set autoread
 
-" the escape key in a terminal lags for 1 second; in practice 100ms is enough
-set ttimeoutlen=100
+" the escape key in a terminal lags for 1s; in practice 10ms is enough
+set ttimeoutlen=10
 
 " purdy colors
 set background=dark
@@ -136,11 +136,8 @@ endif
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
 
-" C-c in insert mode usually by-passes the InsertLeave event
-inoremap <C-c> <ESC>
-
-" C-c turns off any highlighted matches, then acts as normal
-nnoremap <C-c> :noh<CR><C-c>
+" Enter turns off any highlighted matches, then acts as normal
+nnoremap <CR> :noh<CR><CR>
 
 " make vim's regex interpretation friendlier (see :h pattern)
 nnoremap / /\v

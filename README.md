@@ -19,15 +19,12 @@ A few are installed, but Mustang is the theme that is turned on by default.
 
 ### Mappings
 
-The leader key is ";". In practice I don't use leader commands much.
+The leader key is `";"`. In practice I don't use leader commands much.
 
-**Ctrl-C**
+**Enter**
 
-In normal mode, Ctrl-C clears any highlighted searches, if any are displayed,
-before actually executing the usual Ctrl-C (i.e. it's overloaded, not masked).
-
-In insert mode, Ctrl-C acts like the Escape key. In some terminals Vim waits
-a second or so when pressing Escape. Using Ctrl-C has an instant effect.
+In normal mode, clears any highlighted searches, if any are displayed, before
+actually sending Enter (i.e. it's overloaded, not masked).
 
 **Ctrl-O (Visual Block)**
 
@@ -51,6 +48,12 @@ Pressing Ctrl-@ (Ctrl-Shift-2) clears CtrlP's cache and opens CtrlP.
 ### Backup files
 
 All backup/swap files are turned off. Be warned.
+
+### Escape key delay (in terminals)
+
+In most terminals the Escape key normally delays for a second or so because
+some special sequence begin with the Escape key. This is reduced to 10ms,
+which makes it invisible in Vim.
 
 ### Status bar
 
