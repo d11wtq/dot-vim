@@ -22,6 +22,9 @@ Bundle 'gmarik/vundle'
 " ruby mode (might not be needed, w/ vim-rails?)
 Bundle 'vim-ruby/vim-ruby'
 
+" markdown syntax highlighting
+Bundle 'hallison/vim-markdown'
+
 " better tab completion
 Bundle 'ervandew/supertab'
 
