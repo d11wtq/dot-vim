@@ -79,16 +79,14 @@ The easy solution is to just run:
     -bash$  git clone git://github.com/d11wtq/dot-vim.git ~/.vim
     -bash$  ~/.vim/install.sh
 
-This will make the needed symlinks and briefly open and close vim to install
-the plugins. Don't worry if Vim looks all messed up when the script opens it;
-it's just running the `:BundleInstall` command and then going to exit anyway.
+This will make the needed symlinks and open Vim with further instructions.
 
 ### The manual installation
 
-However, if you don't feel comfortable using a shell script, the manual
+If you don't feel comfortable using a shell script, the manual
 steps are simple:
 
-First delete any /.vim/ directory and ~/.vimrc file you may have. Then:
+First delete any ~/.vim/ directory and ~/.vimrc file you may have. Then:
 
     -bash$  git clone git://github.com/d11wtq/dot-vim.git ~/.vim
     -bash$  ln -s ~/.vim/vimrc ~/.vimrc

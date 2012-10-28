@@ -1,0 +1,15 @@
+# Post Installation Instructions
+
+Run the following command to finish the installation:
+
+    :BundleInstall
+
+And you're done! You should probably restart Vim for good measure!
+
+## Further Information
+
+Whenever you want to update the plugins, run:
+
+    :BundleInstall!
+
+(With the bang on the end)
