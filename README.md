@@ -33,7 +33,7 @@ is useful for indenting columns in the middle of a document. It works just
 like Emacs `open-rectangle`.
 
 <img src="http://i.stack.imgur.com/LywJK.png" alt="Before" valign="middle" />
-**==>**
+&nbsp; **==>** &nbsp;
 <img src="http://i.stack.imgur.com/wxi2x.png" alt="After" valign="middle" />
 
 **Ctrl-B**
