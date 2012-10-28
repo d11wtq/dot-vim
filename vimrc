@@ -121,6 +121,9 @@ set autochdir
 " instead of prompting to load changed file, just load it
 set autoread
 
+" the escape key in a terminal lags for 1 second; in practice 100ms is enough
+set ttimeoutlen=100
+
 " purdy colors
 set background=dark
 silent! colorscheme mustang
