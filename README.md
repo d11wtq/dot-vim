@@ -15,7 +15,7 @@ the most useful.
 
 A few are installed, but Mustang is the theme that is turned on by default.
 
-![Mustang](http://i.stack.imgur.com/vZXfV.png)
+![Mustang](http://i.imgur.com/a2moY.png)
 
 ### Mappings
 
