@@ -158,11 +158,23 @@ let g:ctrlp_show_hidden = 1
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
 
-" make status line red while in insert mode
+" change status line color depending on the state of the buffer
+function! UpdateStatusLine(...)
+  if a:0 && a:1 == "i"
+    highlight StatusLine ctermbg=15  ctermfg=9
+  else
+    if &l:modified
+      highlight StatusLine ctermbg=15 ctermfg=32
+    else
+      highlight StatusLine ctermbg=238 ctermfg=253
+    endif
+  endif
+endfunction
+
 augroup hi_statusline
   autocmd!
-  autocmd InsertEnter * hi StatusLine ctermbg=15  ctermfg=9
-  autocmd InsertLeave * hi StatusLine ctermbg=238 ctermfg=253
+  autocmd InsertEnter * call UpdateStatusLine("i")
+  autocmd InsertLeave,CursorMoved,BufWritePost * call UpdateStatusLine()
 augroup END
 
 " finally, load any further, ad-hoc customizations

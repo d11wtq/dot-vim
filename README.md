@@ -54,12 +54,19 @@ All backup/swap files are turned off. Be warned.
 
 ### Status bar
 
-When in insert mode the status bar is turned orange. When in normal mode, it
-is just white. I'd love to also have it turn yellow or green if the current
-buffer is changed (i.e. marked with a "[+]").
+The status bar changes color according to the state of the buffer.
 
-![Insert Mode](http://i.stack.imgur.com/davKX.png)
-![Normal Mode](http://i.stack.imgur.com/Ua8T6.png)
+In insert mode it turns orange.
+
+![Insert Mode](http://i.imgur.com/yU66I.png)
+
+In normal & visual modes, if there are changes it turns blue.
+
+![Modified Buffer](http://i.imgur.com/NPCaj.png)
+
+Normally it's just grey.
+
+![Normal Mode](http://i.imgur.com/Pvs3l.png)
 
 ## Installation Instructions
 
