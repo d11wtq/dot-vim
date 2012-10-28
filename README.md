@@ -4,7 +4,7 @@ This is my personal Vim configuration, which is mostly managed with
 [Vundle](https://github.com/gmarik/vundle/).  I like to run a fairly minimal
 Vim, with just a few customizations for Ruby and PHP development.
 
-## Key Niceties
+## All of the things
 
 ### Plugins
 
