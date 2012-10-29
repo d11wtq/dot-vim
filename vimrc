@@ -157,7 +157,6 @@ let g:omni_sql_no_default_maps = 1
 function! UpdateStatusLine(...)
   if a:0 && a:1 == "i"
     highlight StatusLine ctermbg=15  ctermfg=9 guibg=#EF4E56  guifg=#FAFAFA
-
   else
     if &l:modified
       highlight StatusLine ctermbg=15 ctermfg=32 guibg=#0190D4  guifg=#FAFAFA
