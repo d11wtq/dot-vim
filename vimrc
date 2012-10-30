@@ -153,27 +153,45 @@ let g:ctrlp_show_hidden = 1
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
 
+" keep track of the status bar highlight mode (optimization)
+let g:bar_mode = 0
+
 " change status line color depending on the state of the buffer
-function! UpdateStatusLine(...)
-  if a:0 && a:1 == "i"
+function! ColorizeStatusLine(...)
+  if a:0 && a:1 == "i" && g:bar_mode != -1
+    let g:bar_mode = -1
     highlight StatusLine ctermbg=15  ctermfg=9 guibg=#EF4E56  guifg=#FAFAFA
   else
-    if &l:modified
-      highlight StatusLine ctermbg=15 ctermfg=32 guibg=#0190D4  guifg=#FAFAFA
+    if &l:modified == g:bar_mode
+      return
     else
-      highlight StatusLine ctermbg=238 ctermfg=253 guibg=#D4D4D4  guifg=#666666
-    endif
-  endif
+      if &l:modified
+        highlight StatusLine ctermbg=15 ctermfg=32 guibg=#0190D4  guifg=#FAFAFA
+      else
+        highlight StatusLine ctermbg=238 ctermfg=253 guibg=#D4D4D4  guifg=#666666
+      endif
 
-  if exists("*fugitive#statusline")
-    set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
+      let g:bar_mode = &l:modified
+    endif
   endif
 endfunction
 
 augroup hi_statusline
   autocmd!
-  autocmd InsertEnter * call UpdateStatusLine("i")
-  autocmd InsertLeave,CursorMoved,BufWritePost * call UpdateStatusLine()
+  autocmd InsertEnter * call ColorizeStatusLine("i")
+  autocmd InsertLeave,CursorMoved,BufReadPost,BufWritePost * call ColorizeStatusLine()
+augroup END
+
+" Plug fugitive into the status line
+function! GitifyStatusLine()
+  if exists("*fugitive#statusline")
+    set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
+  endif
+endfunction
+
+augroup gitify_statusline
+  autocmd!
+  autocmd BufEnter * call GitifyStatusLine()
 augroup END
 
 " turn off the toolbar in macvim
