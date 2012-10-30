@@ -182,7 +182,7 @@ augroup hi_statusline
   autocmd InsertLeave,CursorMoved,BufReadPost,BufWritePost * call ColorizeStatusLine()
 augroup END
 
-" Plug fugitive into the status line
+" plug fugitive into the status line
 function! GitifyStatusLine()
   if exists("*fugitive#statusline")
     set statusline=%<%f\ %h%m%r%=%{fugitive#statusline()}\ %-14.(%l,%c%V%)\ %P
