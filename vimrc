@@ -34,6 +34,9 @@ Bundle 'tpope/vim-rails'
 " mustang theme
 Bundle 'croaker/mustang-vim'
 
+" molokai theme
+Bundle 'tomasr/molokai'
+
 " php mode stuff
 Bundle 'tobyS/vip'
 
@@ -100,6 +103,9 @@ set shiftwidth=2
 " soft tabs are 2 spaces
 set softtabstop=2
 
+" use unicode chars for invisibles (like TextMate)
+set listchars=tab:▸\ ,eol:¬
+
 " override tab settings for php
 augroup filetype_php
   autocmd!
@@ -129,7 +135,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=dark
-silent! colorscheme mustang
+silent! colorscheme molokai
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
@@ -143,6 +149,9 @@ vnoremap / /\v
 
 " select a block and hit C-o to open that block with spaces
 vnoremap <C-o> yPgvr<Space>
+
+" tapping space toggles invisibles on/off
+nnoremap <Space> :set list!<CR>
 
 " bring up the file selection menu in ctrlp
 nnoremap <C-f> :CtrlP<CR>
