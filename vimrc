@@ -118,6 +118,12 @@ set autochdir
 " instead of prompting to load changed file, just load it
 set autoread
 
+" use modeline comments to keep tab settings happy
+set modeline
+
+" check 5 lines into a file for a modeline
+set modelines=5
+
 " the escape key in a terminal lags for 1s; in practice 10ms is enough
 set ttimeoutlen=10
 
