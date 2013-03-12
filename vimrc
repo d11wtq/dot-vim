@@ -37,6 +37,9 @@ Bundle 'croaker/mustang-vim'
 " molokai theme
 Bundle 'tomasr/molokai'
 
+" tomorrow theme
+Bundle 'd11wtq/tomorrow-theme-vim'
+
 " php mode stuff
 Bundle 'tobyS/vip'
 
@@ -135,7 +138,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=dark
-silent! colorscheme molokai
+silent! colorscheme tomorrow-night-eighties
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
