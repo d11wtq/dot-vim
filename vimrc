@@ -138,7 +138,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=dark
-silent! colorscheme tomorrow-night-eighties
+silent! colorscheme Tomorrow-Night-Eighties
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
