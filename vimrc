@@ -43,6 +43,9 @@ Bundle 'd11wtq/tomorrow-theme-vim'
 " php mode stuff
 Bundle 'tobyS/vip'
 
+" erlang mode stuff
+Bundle 'jimenezrick/vimerl'
+
 " trailing whitespace annoyances
 Bundle 'bronson/vim-trailing-whitespace'
 
