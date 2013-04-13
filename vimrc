@@ -118,6 +118,12 @@ augroup filetype_php
   autocmd FileType php setlocal noexpandtab shiftwidth=2 tabstop=2
 augroup END
 
+" override tab settings for erlang
+augroup filetype_erlang
+  autocmd!
+  autocmd FileType erlang setlocal shiftwidth=4 tabstop=4 softtabstop=4
+augroup END
+
 " allow syntaxes
 syntax on
 
