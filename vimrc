@@ -55,6 +55,9 @@ Bundle 'tpope/vim-fugitive'
 " quick open files
 Bundle 'kien/ctrlp.vim'
 
+" sublime-text style multiple cursors
+Bundle 'terryma/vim-multiple-cursors'
+
 " show current line and col in status bar
 set ruler
 
