@@ -31,9 +31,6 @@ Bundle 'ervandew/supertab'
 " erb support and the likes
 Bundle 'tpope/vim-rails'
 
-" mustang theme
-Bundle 'croaker/mustang-vim'
-
 " molokai theme
 Bundle 'tomasr/molokai'
 

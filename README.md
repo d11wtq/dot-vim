@@ -4,75 +4,63 @@ This is my personal Vim configuration, which is mostly managed with
 [Vundle](https://github.com/gmarik/vundle/).  I like to run a fairly minimal
 Vim, with just a few customizations for Ruby and PHP development.
 
-## All of the things
+![Screenshot](http://i.imgur.com/OuizSk5.png)
 
-### Plugins
+## Plugins
 
 Some plugins are installed, but not very many. Supertab and CtrlP are by far
 the most useful.
 
-### Color Theme
+  * Vundle
+    - plugins are managed through `Bundle` lines in .vimrc
+    - no need to leave Vim to install plugins
+    - no need to deal with git submodules
+    - easy to keep up-to-date
+  * CtrlP
+    - kien's ctrlp plugin provides fuzzy find in project
+    - it's generally fast, though sometimes makes odd preferences
+  * Supertab
+    - allows for tab-completion of words in insert mode
+  * Multiple Cursors
+    - terryma's vim-multiple-cursors adds Sublime Text's concept to Vim
+  * Trailing Whitespace
+    - unwanted trailing whitespace shows up in a nice ugly red
+  * Erlang
+    - interacts with the Erlang VM to help with Erlang development
+  * Ruby on Rails
+    - provides useful features for working on Rails projects
 
-Mustang is the theme that is turned on by default. It doesn't over-use color,
-has good contrast and is easy on the eyes.
+## Custom settings
 
-![Mustang](http://i.imgur.com/a2moY.png)
+  * Map leader
+    - set to `";"`, though I don't use it much
+  * Indentaton
+    - 2 spaces almost everywhere
+    - 2 spaces for Ruby
+    - 4 spaces for Erlang
+    - tabs for PHP
+  * Trailing whitespace
+    - automatically cleaned up as you type
+    - doesn't tamper with whitespace that was already there
+    - forces a newline at the end of files
+  * Backup files etc
+    - all turned off, sorry
+  * Line numbers
+    - on by default
+  * Mappings
+    - <kbd>C-b</kbd> runs `:CtrlPBuffer`
+    - <kbd>C-@</kbd> runs `:CtrlPClearAllCaches` then `:CtrlP`
+    - <kbd>CR</kbd> runs `:noh` then `<CR>` (turn off search matches)
+    - <kbd>Space</kbd> runs `:set list!` (toggle invisibles on/off)
+    - <kbd>C-o</kbd> in visual block mode, fills the selection with spaces
+    - <kbd>/</kbd> inserts a `"\v"` in the patten so the regexp is more sane
+  * Status bar
+    - the status bar changes color to reflect the following states:
+      - normal/visual, clean: white
+      - normal/visual, dirty: blue
+      - insert: red
 
-### Mappings
-
-The leader key is `";"`. In practice I don't use leader mappings much.
-
-**Enter**
-
-In normal mode, clears any highlighted searches, if any are displayed, before
-actually sending Enter (i.e. it's overloaded, not masked).
-
-**Ctrl-O (Visual Block)**
-
-When in Visual Block mode, hitting Ctrl-O "opens" the selected region. This
-is useful for indenting columns in the middle of a document. It works just
-like Emacs `open-rectangle`.
-
-<img src="http://i.stack.imgur.com/LywJK.png" alt="Before" valign="middle" />
-&nbsp;&nbsp; ⇉ ⇉ &nbsp;&nbsp;
-<img src="http://i.stack.imgur.com/wxi2x.png" alt="After" valign="middle" />
-
-**Ctrl-B**
-
-Pressing Ctrl-B opens CtrlP in buffer list mode. This is the same as pressing
-Ctrl-P then Ctrl-B.
-
-**Ctrl-@**
-
-Pressing Ctrl-@ (Ctrl-Shift-2) clears CtrlP's cache and opens CtrlP.
-
-### Backup files
-
-All backup/swap files are turned off. Be warned.
-
-### Escape key delay (in terminals)
-
-In most terminals the Escape key normally delays for a second or so because
-some special sequence begin with the Escape key. This is reduced to 10ms,
-which makes it invisible in Vim.
-
-### Status bar
-
-The status bar changes color according to the state of the buffer.
-
-In insert mode it turns orange.
-
-![Insert Mode](http://i.imgur.com/yU66I.png)
-
-In normal & visual modes, if there are changes it turns blue.
-
-![Modified Buffer](http://i.imgur.com/NPCaj.png)
-
-Normally it's just grey.
-
-![Normal Mode](http://i.imgur.com/Pvs3l.png)
-
-## Installation Instructions
+## Installation
 
 You need at least Vim 7.2, and you'll need git installed.
 
