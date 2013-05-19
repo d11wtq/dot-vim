@@ -60,9 +60,9 @@ the most useful.
       - normal/visual, dirty: blue
       - insert: red
 
-![Normal Mode](http://i.imgur.com/nUkT0X3.png)
-![Insert Mode](http://i.imgur.com/yhFCYbF.png)
-![Dirty Buffer](http://i.imgur.com/L8YIn3D.png)
+![Normal Mode](http://i.imgur.com/htprd9D.png)
+![Insert Mode](http://i.imgur.com/0UUGsxe.png)
+![Dirty Buffer](http://i.imgur.com/s13GJb4.png)
 
 ## Installation
 
