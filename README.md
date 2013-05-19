@@ -60,6 +60,10 @@ the most useful.
       - normal/visual, dirty: blue
       - insert: red
 
+![Normal Mode](http://i.imgur.com/nUkT0X3.png)
+![Insert Mode](http://i.imgur.com/yhFCYbF.png)
+![Dirty Buffer](http://i.imgur.com/L8YIn3D.png)
+
 ## Installation
 
 You need at least Vim 7.2, and you'll need git installed.
