@@ -35,7 +35,10 @@ Bundle 'tpope/vim-rails'
 Bundle 'tomasr/molokai'
 
 " tomorrow theme
-Bundle 'd11wtq/tomorrow-theme-vim'
+Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
+
+" a hybrid theme
+Bundle 'w0ng/vim-hybrid'
 
 " php mode stuff
 Bundle 'tobyS/vip'
@@ -147,7 +150,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=dark
-silent! colorscheme Tomorrow-Night-Eighties
+silent! colorscheme hybrid
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
@@ -173,6 +176,9 @@ nnoremap <C-b> :CtrlPBuffer<CR>
 
 " clear the ctrlp cache and open ctrlp
 nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
+
+" open this vimrc with ;/
+nnoremap <Leader>/ :e ~/.vimrc<CR>
 
 " ctrlp doesn't show dotfiles by default
 let g:ctrlp_show_hidden = 1
