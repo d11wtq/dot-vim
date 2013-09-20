@@ -174,6 +174,10 @@ nnoremap <C-f> :CtrlP<CR>
 " bring up the buffer selection menu in ctrlp
 nnoremap <C-b> :CtrlPBuffer<CR>
 
+" emacs key binding - guilty
+nnoremap <C-g> <ESC>
+vnoremap <C-g> <ESC>
+
 " clear the ctrlp cache and open ctrlp
 nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
