@@ -165,8 +165,11 @@ vnoremap / /\v
 " select a block and hit C-o to open that block with spaces
 vnoremap <C-o> yPgvr<Space>
 
-" tapping space toggles invisibles on/off
-nnoremap <Space> :set list!<CR>
+" tapping space shows and hides the right margin
+nnoremap <Space> :call ToggleMarginIndicator()<CR>
+
+" tapping <tab> toggles invisibles on/off
+nnoremap <Tab> :set list!<CR>
 
 " bring up the file selection menu in ctrlp
 nnoremap <C-f> :CtrlP<CR>
@@ -182,13 +185,22 @@ vnoremap <C-g> <ESC>
 nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
 " open this vimrc with ;/
-nnoremap <Leader>/ :e ~/.vimrc<CR>
+nnoremap <Leader>/ :e $MYVIMRC<CR>
 
 " ctrlp doesn't show dotfiles by default
 let g:ctrlp_show_hidden = 1
 
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
+
+" show or hide the margin indicator
+function! ToggleMarginIndicator()
+  if &colorcolumn
+    set colorcolumn=
+  else
+    set colorcolumn=80
+  endif
+endfunction
 
 " keep track of the status bar highlight mode (optimization)
 let g:bar_mode = 0
