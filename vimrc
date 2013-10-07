@@ -112,20 +112,16 @@ set shiftwidth=2
 " soft tabs are 2 spaces
 set softtabstop=2
 
+" override tab settings for other languages
+augroup tab_settings
+  autocmd!
+  autocmd FileType php    setlocal shiftwidth=2 tabstop=2 noexpandtab
+  autocmd FileType erlang setlocal shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+augroup END
+
 " use unicode chars for invisibles (like TextMate)
 set listchars=tab:▸\ ,eol:¬
-
-" override tab settings for php
-augroup filetype_php
-  autocmd!
-  autocmd FileType php setlocal noexpandtab shiftwidth=2 tabstop=2
-augroup END
-
-" override tab settings for erlang
-augroup filetype_erlang
-  autocmd!
-  autocmd FileType erlang setlocal shiftwidth=4 tabstop=4 softtabstop=4
-augroup END
 
 " allow syntaxes
 syntax on
