@@ -27,17 +27,20 @@ the most useful.
     - unwanted trailing whitespace shows up in a nice ugly red
   * Erlang
     - interacts with the Erlang VM to help with Erlang development
+  * Clojure
+    - adds syntax support, paredit and REPL features
   * Ruby on Rails
     - provides useful features for working on Rails projects
 
 ## Custom settings
 
   * Map leader
-    - set to `";"`, though I don't use it much
+    - set to `";"`
   * Indentaton
     - 2 spaces almost everywhere
     - 2 spaces for Ruby
     - 4 spaces for Erlang
+    - semantically aligned for Clojure
     - tabs for PHP
   * Trailing whitespace
     - automatically cleaned up as you type

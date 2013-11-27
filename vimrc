@@ -55,8 +55,17 @@ Bundle 'tpope/vim-fugitive'
 " quick open files
 Bundle 'kien/ctrlp.vim'
 
-" sublime-text style multiple cursors
-Bundle 'terryma/vim-multiple-cursors'
+" clojure syntax handling
+Bundle 'guns/vim-clojure-static'
+
+" clojure repl
+Bundle 'tpope/vim-fireplace'
+
+" rainbow parens
+Bundle 'kien/rainbow_parentheses.vim'
+
+" paredit mode for lisps
+Bundle 'vim-scripts/paredit.vim'
 
 " show current line and col in status bar
 set ruler
@@ -167,6 +176,12 @@ nnoremap <Space> :call ToggleMarginIndicator()<CR>
 " tapping <tab> toggles invisibles on/off
 nnoremap <Tab> :set list!<CR>
 
+" toggle rainbow parens
+nnoremap <Leader>' :RainbowParenthesesToggle<CR>
+
+" clojure prompt
+nmap <Leader>, cqp
+
 " bring up the file selection menu in ctrlp
 nnoremap <C-f> :CtrlP<CR>
 
@@ -188,6 +203,9 @@ let g:ctrlp_show_hidden = 1
 
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
+
+" used for writing midje tests in clojure
+let g:clojure_fuzzy_indent_patterns += ['fact', 'facts']
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
