@@ -154,8 +154,8 @@ set modelines=5
 set ttimeoutlen=10
 
 " purdy colors
-set background=dark
-silent! colorscheme hybrid
+set background=light
+silent! colorscheme hybrid-light
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
@@ -204,8 +204,14 @@ let g:ctrlp_show_hidden = 1
 " ubuntu has some dumb sql plugin installed that breaks the arrow keys
 let g:omni_sql_no_default_maps = 1
 
-" used for writing midje tests in clojure
-let g:clojure_fuzzy_indent_patterns += ['fact', 'facts']
+" special clojure forms
+let g:clojure_fuzzy_indent_patterns = [
+      \ '^with',
+      \ '^def',
+      \ '^let',
+      \ 'context',
+      \ 'fact',
+      \ 'facts' ]
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
