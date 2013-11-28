@@ -158,7 +158,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=light
-silent! colorscheme hemisu
+silent! colorscheme hybrid-light
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
