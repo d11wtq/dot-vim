@@ -212,9 +212,9 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^with',
       \ '^def',
       \ '^let',
-      \ 'context',
-      \ 'fact',
-      \ 'facts' ]
+      \ '^context$',
+      \ '^fact$',
+      \ '^facts$' ]
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
