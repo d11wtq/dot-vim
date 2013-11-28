@@ -214,7 +214,9 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^let',
       \ '^context$',
       \ '^fact$',
-      \ '^facts$' ]
+      \ '^facts$',
+      \ '^background$',
+      \ '^against-background$' ]
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
