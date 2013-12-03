@@ -40,8 +40,8 @@ Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
 " a hybrid theme
 Bundle 'w0ng/vim-hybrid'
 
-" hemisu (nice light theme)
-Bundle 'noahfrederick/vim-hemisu'
+" my own theme
+Bundle 'd11wtq/subatomic256.vim'
 
 " php mode stuff
 Bundle 'tobyS/vip'
@@ -158,7 +158,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=light
-silent! colorscheme hybrid-light
+silent! colorscheme subatomic256
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
