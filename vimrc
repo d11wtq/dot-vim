@@ -227,35 +227,6 @@ function! ToggleMarginIndicator()
   endif
 endfunction
 
-" keep track of the status bar highlight mode (optimization)
-let g:bar_mode = 0
-
-" change status line color depending on the state of the buffer
-function! ColorizeStatusLine(...)
-  if a:0 && a:1 == "i" && g:bar_mode != -1
-    let g:bar_mode = -1
-    highlight StatusLine ctermbg=15  ctermfg=9 guibg=#EF4E56  guifg=#FAFAFA
-  else
-    if &l:modified == g:bar_mode
-      return
-    else
-      if &l:modified
-        highlight StatusLine ctermbg=15 ctermfg=32 guibg=#0190D4  guifg=#FAFAFA
-      else
-        highlight StatusLine ctermbg=238 ctermfg=253 guibg=#D4D4D4  guifg=#666666
-      endif
-
-      let g:bar_mode = &l:modified
-    endif
-  endif
-endfunction
-
-augroup hi_statusline
-  autocmd!
-  autocmd InsertEnter * call ColorizeStatusLine("i")
-  autocmd InsertLeave,CursorMoved,BufReadPost,BufWritePost * call ColorizeStatusLine()
-augroup END
-
 " plug fugitive into the status line
 function! GitifyStatusLine()
   if exists("*fugitive#statusline")
