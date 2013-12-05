@@ -31,17 +31,14 @@ Bundle 'ervandew/supertab'
 " erb support and the likes
 Bundle 'tpope/vim-rails'
 
-" molokai theme
-Bundle 'tomasr/molokai'
-
-" tomorrow theme
-Bundle 'chriskempson/tomorrow-theme', {'rtp': 'vim/'}
-
 " a hybrid theme
 Bundle 'w0ng/vim-hybrid'
 
 " my own theme
 Bundle 'd11wtq/subatomic256.vim'
+
+" my other own theme
+Bundle 'd11wtq/macvim256.vim'
 
 " php mode stuff
 Bundle 'tobyS/vip'
@@ -158,7 +155,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=light
-silent! colorscheme subatomic256
+silent! colorscheme macvim256
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
