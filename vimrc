@@ -67,6 +67,9 @@ Bundle 'kien/rainbow_parentheses.vim'
 " paredit mode for lisps
 Bundle 'vim-scripts/paredit.vim'
 
+" maniuplate delimited things
+Bundle 'tpope/vim-surround'
+
 " show current line and col in status bar
 set ruler
 
@@ -172,21 +175,17 @@ nnoremap <Space> :call ToggleMarginIndicator()<CR>
 " tapping <tab> toggles invisibles on/off
 nnoremap <Tab> :set list!<CR>
 
+" strip all trailing whitespace in the buffer
+nnoremap <Leader><Backspace> :FixWhitespace<CR>
+
 " toggle rainbow parens
 nnoremap <Leader>' :RainbowParenthesesToggle<CR>
 
 " clojure prompt
 nmap <Leader>, cqp
 
-" bring up the file selection menu in ctrlp
-nnoremap <C-f> :CtrlP<CR>
-
 " bring up the buffer selection menu in ctrlp
 nnoremap <C-b> :CtrlPBuffer<CR>
-
-" emacs key binding - guilty
-nnoremap <C-g> <ESC>
-vnoremap <C-g> <ESC>
 
 " clear the ctrlp cache and open ctrlp
 nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
@@ -204,12 +203,7 @@ let g:omni_sql_no_default_maps = 1
 let g:clojure_fuzzy_indent_patterns = [
       \ '^with',
       \ '^def',
-      \ '^let',
-      \ '^context$',
-      \ '^fact$',
-      \ '^facts$',
-      \ '^background$',
-      \ '^against-background$' ]
+      \ '^let' ]
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
