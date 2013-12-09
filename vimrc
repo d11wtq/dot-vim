@@ -163,10 +163,6 @@ let mapleader = ";"
 " Enter turns off any highlighted matches, then acts as normal
 nnoremap <CR> :noh<CR><CR>
 
-" make vim's regex interpretation friendlier (see :h pattern)
-nnoremap / /\v
-vnoremap / /\v
-
 " select a block and hit C-o to open that block with spaces
 vnoremap <C-o> yPgvr<Space>
 
