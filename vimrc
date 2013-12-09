@@ -213,7 +213,7 @@ let g:clojure_fuzzy_indent_patterns = [
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
-  if &colorcolumn
+  if &l:colorcolumn
     set colorcolumn=
   else
     set colorcolumn=80
