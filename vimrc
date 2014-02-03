@@ -205,6 +205,12 @@ let g:clojure_fuzzy_indent_patterns = [
       \ '^def',
       \ '^let' ]
 
+" don't limit how far back clojure-static can search
+let g:clojure_maxlines = 10000
+
+" don't limit how far back paredit can search
+let g:paredit_matchlines = 10000
+
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
   if &l:colorcolumn
