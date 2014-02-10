@@ -211,6 +211,11 @@ let g:clojure_maxlines = 10000
 " don't limit how far back paredit can search
 let g:paredit_matchlines = 10000
 
+augroup scheme_settings
+  autocmd!
+  autocmd FileType scheme silent! setlocal lispwords += define
+augroup END
+
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
   if &l:colorcolumn
