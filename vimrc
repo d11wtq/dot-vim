@@ -193,6 +193,9 @@ nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
 " open this vimrc with ;/
 nnoremap <Leader>/ :e $MYVIMRC<CR>
 
+" highlight .sh files with bash syntax
+let g:is_bash = 1
+
 " ctrlp doesn't show dotfiles by default
 let g:ctrlp_show_hidden = 1
 
