@@ -1,0 +1,20 @@
+" This file is to be loaded by Vim to set up d11wtq/dot-vim:
+"     vim -u ~/.vim/setup
+"
+" Vim will install Vundle and all plugins, then quit, after which you have a
+" fully configured Vim
+
+" install vundle so we can manage plugins
+call system('git clone https://github.com/gmarik/Vundle.vim ~/.vim/bundle/vundle')
+
+" make sure ~/.vimrc actually points to ~/.vim/vimrc
+call system('ln -sf ~/.vim/vimrc ~/.vimrc')
+
+" load the actual ~/.vimrc
+source ~/.vimrc
+
+" install all plugins
+BundleInstall
+
+" quit vim
+quitall!

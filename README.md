@@ -69,16 +69,16 @@ the most useful.
 
 ## Installation
 
-You need at least Vim 7.2, and you'll need git installed.
+You need at least Vim 7.3, and you'll need git installed.
 
 ### The no-brainer installation
 
 The easy solution is to just run:
 
     -bash$  git clone git://github.com/d11wtq/dot-vim.git ~/.vim
-    -bash$  ~/.vim/install.sh
+    -bash$  vim -u ~/.vim/setup
 
-This will make the needed symlinks and open Vim with further instructions.
+This will make the needed symlinks and open Vim to finish the install.
 
 ### The manual installation
 
@@ -89,7 +89,7 @@ First delete any ~/.vim/ directory and ~/.vimrc file you may have. Then:
 
     -bash$  git clone git://github.com/d11wtq/dot-vim.git ~/.vim
     -bash$  ln -s ~/.vim/vimrc ~/.vimrc
-    -bash$  cd ~/.vim && git submodule update --init
+    -bash$  cd ~/.vim && git clone https://github.com/gmarik/Vundle.vim bundle/vundle
 
 Now you can start vim.  No plugins (except Vundle) will have yet been
 installed, but you just install them using Vundle from inside of Vim:
@@ -114,3 +114,5 @@ Vundle manages updating of plugins, via git.  Just run:
 ## Disclaimer
 
 Ummm.
+
+:wq
