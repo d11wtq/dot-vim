@@ -70,6 +70,9 @@ Bundle 'vim-scripts/paredit.vim'
 " maniuplate delimited things
 Bundle 'tpope/vim-surround'
 
+" llvm-as syntax handling
+Bundle 'Superbil/llvm.vim'
+
 " show current line and col in status bar
 set ruler
 
@@ -157,8 +160,11 @@ set modelines=5
 set ttimeoutlen=10
 
 " purdy colors
-set background=light
-silent! colorscheme macvim256
+augroup load_color_scheme
+  autocmd!
+  autocmd! VimEnter * silent! set background=dark | colorscheme macvim256
+augroup END
+
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
@@ -198,9 +204,6 @@ let g:is_bash = 1
 
 " ctrlp doesn't show dotfiles by default
 let g:ctrlp_show_hidden = 1
-
-" ubuntu has some dumb sql plugin installed that breaks the arrow keys
-let g:omni_sql_no_default_maps = 1
 
 " special clojure forms
 let g:clojure_fuzzy_indent_patterns = [
