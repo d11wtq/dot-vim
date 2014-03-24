@@ -56,7 +56,7 @@ the most useful.
     - <kbd>CR</kbd> runs `:noh` then `<CR>` (turn off search matches)
     - <kbd>Space</kbd> runs `:set list!` (toggle invisibles on/off)
     - <kbd>C-o</kbd> in visual block mode, fills the selection with spaces
-    - <kbd>/</kbd> inserts a `"\v"` in the patten so the regexp is more sane
+    - <kbd>/</kbd> inserts a `"\v"` in the pattern so the regexp is more sane
   * Status bar
     - the status bar changes color to reflect the following states:
       - normal/visual, clean: white
