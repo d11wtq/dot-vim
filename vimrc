@@ -160,11 +160,8 @@ set modelines=5
 set ttimeoutlen=10
 
 " purdy colors
-augroup load_color_scheme
-  autocmd!
-  autocmd! VimEnter * silent! set background=dark | colorscheme macvim256
-augroup END
-
+set background=light
+colorscheme macvim256
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
