@@ -58,9 +58,6 @@ Bundle 'kien/ctrlp.vim'
 " clojure syntax handling
 Bundle 'guns/vim-clojure-static'
 
-" clojure repl
-Bundle 'tpope/vim-fireplace'
-
 " rainbow parens
 Bundle 'kien/rainbow_parentheses.vim'
 
