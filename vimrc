@@ -55,6 +55,9 @@ Bundle 'tpope/vim-fugitive'
 " quick open files
 Bundle 'kien/ctrlp.vim'
 
+" buffer management for ctrlp
+Bundle 'd11wtq/ctrlp_bdelete.vim'
+
 " clojure syntax handling
 Bundle 'guns/vim-clojure-static'
 
@@ -69,6 +72,9 @@ Bundle 'tpope/vim-surround'
 
 " llvm-as syntax handling
 Bundle 'Superbil/llvm.vim'
+
+" initialize ctrlp_bdelete
+call ctrlp_bdelete#init()
 
 " show current line and col in status bar
 set ruler
