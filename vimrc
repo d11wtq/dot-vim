@@ -74,7 +74,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'Superbil/llvm.vim'
 
 " initialize ctrlp_bdelete
-call ctrlp_bdelete#init()
+silent! call ctrlp_bdelete#init()
 
 " show current line and col in status bar
 set ruler
