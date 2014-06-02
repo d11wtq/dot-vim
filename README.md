@@ -21,16 +21,25 @@ the most useful.
     - it's generally fast, though sometimes makes odd preferences
   * Supertab
     - allows for tab-completion of words in insert mode
-  * Multiple Cursors
-    - terryma's vim-multiple-cursors adds Sublime Text's concept to Vim
   * Trailing Whitespace
     - unwanted trailing whitespace shows up in a nice ugly red
   * Erlang
     - interacts with the Erlang VM to help with Erlang development
   * Clojure
     - adds syntax support, paredit and REPL features
+  * Paredit
+    - automatically matches braces in lisps; allows lisps to be edited as a
+      syntax tree, rather than just text
+  * Rainbow Parentheses
+    - shows matching parentheses in pretty colors (useful for lisps)
   * Ruby on Rails
     - provides useful features for working on Rails projects
+  * Fugitive
+    - allows vim to act as a frontend to git
+  * Surround
+    - allows inserting/modifying matching pairs (quotes, brackets) easily
+  * Markdown
+    - syntax highlighting for markdown files (buggy!!!)
 
 ## Custom settings
 
@@ -40,7 +49,8 @@ the most useful.
     - 2 spaces almost everywhere
     - 2 spaces for Ruby
     - 4 spaces for Erlang
-    - semantically aligned for Clojure
+    - 4 spaces for Python
+    - semantically aligned for Clojure/Lisp/Scheme
     - tabs for PHP
   * Trailing whitespace
     - automatically cleaned up as you type
@@ -54,18 +64,12 @@ the most useful.
     - <kbd>C-b</kbd> runs `:CtrlPBuffer`
     - <kbd>C-@</kbd> runs `:CtrlPClearAllCaches` then `:CtrlP`
     - <kbd>CR</kbd> runs `:noh` then `<CR>` (turn off search matches)
-    - <kbd>Space</kbd> runs `:set list!` (toggle invisibles on/off)
+    - <kbd>Space</kbd> toggles `colorcolumn` on/off (right margin)
+    - <kbd>TAB</kbd> runs `:set list!` (toggle invisibles on/off)
     - <kbd>C-o</kbd> in visual block mode, fills the selection with spaces
-    - <kbd>/</kbd> inserts a `"\v"` in the pattern so the regexp is more sane
-  * Status bar
-    - the status bar changes color to reflect the following states:
-      - normal/visual, clean: white
-      - normal/visual, dirty: blue
-      - insert: red
-
-![Normal Mode](http://i.imgur.com/htprd9D.png)
-![Insert Mode](http://i.imgur.com/0UUGsxe.png)
-![Dirty Buffer](http://i.imgur.com/s13GJb4.png)
+    - <kbd>Leader-/</kbd> opens the ~/.vimrc
+    - <kbd>Leader-Backspace</kbd> deletes trailing whitespace
+    - <kbd>Leader-'</kbd> toggles rainbow-parens on/off
 
 ## Installation
 
