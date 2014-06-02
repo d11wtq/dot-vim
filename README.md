@@ -2,9 +2,9 @@
 
 This is my personal Vim configuration, which is mostly managed with
 [Vundle](https://github.com/gmarik/vundle/).  I like to run a fairly minimal
-Vim, with just a few customizations for Ruby and PHP development.
+Vim, with just a few customizations for the languages I use regularly.
 
-![Screenshot](http://i.imgur.com/OuizSk5.png)
+![Screenshot](http://i.imgur.com/UiaSsOw.png)
 
 ## Plugins
 
