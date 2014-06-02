@@ -164,7 +164,7 @@ set ttimeoutlen=10
 
 " purdy colors
 set background=light
-colorscheme macvim256
+silent! colorscheme macvim256
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
