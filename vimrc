@@ -163,8 +163,7 @@ set modelines=5
 set ttimeoutlen=10
 
 " purdy colors
-set background=light
-silent! colorscheme macvim256
+silent! colorscheme hybrid
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
