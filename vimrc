@@ -162,6 +162,9 @@ set modelines=5
 " the escape key in a terminal lags for 1s; in practice 10ms is enough
 set ttimeoutlen=10
 
+" show which line the cursor is on
+set cursorline
+
 " purdy colors
 silent! colorscheme hybrid
 
@@ -204,6 +207,9 @@ let g:is_bash = 1
 " ctrlp doesn't show dotfiles by default
 let g:ctrlp_show_hidden = 1
 
+" hide a few things from ctrlp
+let g:ctrlp_custom_ignore = 'node_modules\|.git'
+
 " special clojure forms
 let g:clojure_fuzzy_indent_patterns = [
       \ '^with',
@@ -223,7 +229,7 @@ augroup END
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
-  if &l:colorcolumn
+  if &colorcolumn
     set colorcolumn=
   else
     set colorcolumn=80
