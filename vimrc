@@ -130,9 +130,6 @@ set shiftwidth=2
 " soft tabs are 2 spaces
 set softtabstop=2
 
-" smartindent is the devil
-set nosmartindent
-
 " override tab settings for other languages
 augroup tab_settings
   autocmd!
