@@ -23,7 +23,7 @@ Bundle 'gmarik/vundle'
 Bundle 'vim-ruby/vim-ruby'
 
 " markdown syntax highlighting
-Bundle 'hallison/vim-markdown'
+Bundle 'plasticboy/vim-markdown'
 
 " better tab completion
 Bundle 'ervandew/supertab'
@@ -221,6 +221,9 @@ let g:clojure_maxlines = 10000
 
 " don't limit how far back paredit can search
 let g:paredit_matchlines = 10000
+
+" don't fold markdown on open
+let g:vim_markdown_folding_disabled = 1
 
 augroup scheme_settings
   autocmd!
