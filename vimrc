@@ -162,9 +162,6 @@ set modelines=5
 " the escape key in a terminal lags for 1s; in practice 10ms is enough
 set ttimeoutlen=10
 
-" show which line the cursor is on
-set cursorline
-
 " purdy colors
 silent! colorscheme hybrid
 
