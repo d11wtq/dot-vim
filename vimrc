@@ -205,7 +205,7 @@ let g:is_bash = 1
 let g:ctrlp_show_hidden = 1
 
 " hide a few things from ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|.git'
+let g:ctrlp_custom_ignore = 'node_modules\|\.git'
 
 " special clojure forms
 let g:clojure_fuzzy_indent_patterns = [
