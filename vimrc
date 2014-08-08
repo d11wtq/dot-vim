@@ -53,7 +53,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'tpope/vim-fugitive'
 
 " quick open files
-Bundle 'kien/ctrlp.vim'
+Bundle 'ctrlpvim/ctrlp.vim'
 
 " buffer management for ctrlp
 Bundle 'd11wtq/ctrlp_bdelete.vim'
