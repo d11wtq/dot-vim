@@ -192,6 +192,9 @@ nmap <Leader>, cqp
 " bring up the buffer selection menu in ctrlp
 nnoremap <C-b> :CtrlPBuffer<CR>
 
+" open ctrlp with a prompt
+nnoremap <C-f> :CtrlP ./
+
 " clear the ctrlp cache and open ctrlp
 nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
 
