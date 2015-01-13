@@ -62,7 +62,7 @@ Bundle 'd11wtq/ctrlp_bdelete.vim'
 Bundle 'guns/vim-clojure-static'
 
 " rainbow parens
-Bundle 'kien/rainbow_parentheses.vim'
+Bundle 'amdt/vim-niji'
 
 " paredit mode for lisps
 Bundle 'vim-scripts/paredit.vim'
@@ -182,9 +182,6 @@ nnoremap <Tab> :set list!<CR>
 
 " strip all trailing whitespace in the buffer
 nnoremap <Leader><Backspace> :FixWhitespace<CR>
-
-" toggle rainbow parens
-nnoremap <Leader>' :RainbowParenthesesToggle<CR>
 
 " clojure prompt
 nmap <Leader>, cqp
