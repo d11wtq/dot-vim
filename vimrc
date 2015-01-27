@@ -37,6 +37,9 @@ Bundle 'w0ng/vim-hybrid'
 " my own theme
 Bundle 'd11wtq/subatomic256.vim'
 
+" gruvbox theme
+Bundle 'morhetz/gruvbox'
+
 " my other own theme
 Bundle 'd11wtq/macvim256.vim'
 
@@ -163,7 +166,8 @@ set modelines=5
 set ttimeoutlen=10
 
 " purdy colors
-silent! colorscheme hybrid
+set background=dark
+silent! colorscheme gruvbox
 
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
