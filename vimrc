@@ -165,10 +165,6 @@ set modelines=5
 " the escape key in a terminal lags for 1s; in practice 10ms is enough
 set ttimeoutlen=10
 
-" purdy colors
-set background=dark
-silent! colorscheme gruvbox
-
 " set the leader key to ';' (easy to type)
 let mapleader = ";"
 
@@ -225,6 +221,11 @@ let g:paredit_matchlines = 10000
 
 " don't fold markdown on open
 let g:vim_markdown_folding_disabled = 1
+
+" purdy colors
+set background=dark
+let g:gruvbox_italic = 0
+silent! colorscheme gruvbox
 
 augroup scheme_settings
   autocmd!
