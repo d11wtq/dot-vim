@@ -17,64 +17,64 @@ set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
 " let vundle manage itself
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
 " ruby mode (might not be needed, w/ vim-rails?)
-Bundle 'vim-ruby/vim-ruby'
+Plugin 'vim-ruby/vim-ruby'
 
 " markdown syntax highlighting
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 
 " better tab completion
-Bundle 'ervandew/supertab'
+Plugin 'ervandew/supertab'
 
 " erb support and the likes
-Bundle 'tpope/vim-rails'
+Plugin 'tpope/vim-rails'
 
 " a hybrid theme
-Bundle 'w0ng/vim-hybrid'
+Plugin 'w0ng/vim-hybrid'
 
 " my own theme
-Bundle 'd11wtq/subatomic256.vim'
+Plugin 'd11wtq/subatomic256.vim'
 
 " gruvbox theme
-Bundle 'morhetz/gruvbox'
+Plugin 'morhetz/gruvbox'
 
 " my other own theme
-Bundle 'd11wtq/macvim256.vim'
+Plugin 'd11wtq/macvim256.vim'
 
 " php mode stuff
-Bundle 'tobyS/vip'
+Plugin 'tobyS/vip'
 
 " erlang mode stuff
-Bundle 'jimenezrick/vimerl'
+Plugin 'jimenezrick/vimerl'
 
 " trailing whitespace annoyances
-Bundle 'bronson/vim-trailing-whitespace'
+Plugin 'bronson/vim-trailing-whitespace'
 
 " git integration
-Bundle 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
 
 " quick open files
-Bundle 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " buffer management for ctrlp
-Bundle 'd11wtq/ctrlp_bdelete.vim'
+Plugin 'd11wtq/ctrlp_bdelete.vim'
 
 " clojure syntax handling
-Bundle 'guns/vim-clojure-static'
+Plugin 'guns/vim-clojure-static'
 
 " rainbow parens
-Bundle 'amdt/vim-niji'
+Plugin 'amdt/vim-niji'
 
 " paredit mode for lisps
-Bundle 'vim-scripts/paredit.vim'
+Plugin 'vim-scripts/paredit.vim'
 
 " maniuplate delimited things
-Bundle 'tpope/vim-surround'
+Plugin 'tpope/vim-surround'
 
 " llvm-as syntax handling
-Bundle 'Superbil/llvm.vim'
+Plugin 'Superbil/llvm.vim'
 
 " initialize ctrlp_bdelete
 silent! call ctrlp_bdelete#init()
