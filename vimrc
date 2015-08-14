@@ -65,7 +65,7 @@ Plugin 'd11wtq/ctrlp_bdelete.vim'
 Plugin 'guns/vim-clojure-static'
 
 " rainbow parens
-Plugin 'amdt/vim-niji'
+Plugin 'losingkeys/vim-niji'
 
 " paredit mode for lisps
 Plugin 'vim-scripts/paredit.vim'
