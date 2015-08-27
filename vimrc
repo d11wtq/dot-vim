@@ -19,6 +19,9 @@ call vundle#rc()
 " let vundle manage itself
 Plugin 'gmarik/vundle'
 
+" html5 support
+Plugin 'othree/html5.vim'
+
 " ruby mode (might not be needed, w/ vim-rails?)
 Plugin 'vim-ruby/vim-ruby'
 
@@ -31,17 +34,8 @@ Plugin 'ervandew/supertab'
 " erb support and the likes
 Plugin 'tpope/vim-rails'
 
-" a hybrid theme
-Plugin 'w0ng/vim-hybrid'
-
-" my own theme
-Plugin 'd11wtq/subatomic256.vim'
-
 " gruvbox theme
 Plugin 'morhetz/gruvbox'
-
-" my other own theme
-Plugin 'd11wtq/macvim256.vim'
 
 " php mode stuff
 Plugin 'tobyS/vip'

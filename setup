@@ -14,7 +14,7 @@ call system('ln -sf ~/.vim/vimrc ~/.vimrc')
 source ~/.vimrc
 
 " install all plugins
-BundleInstall
+PluginInstall
 
 " quit vim
 quitall!
