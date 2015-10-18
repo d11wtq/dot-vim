@@ -70,6 +70,9 @@ Plugin 'tpope/vim-surround'
 " llvm-as syntax handling
 Plugin 'Superbil/llvm.vim'
 
+" golang syntax
+Plugin 'fatih/vim-go'
+
 " initialize ctrlp_bdelete
 silent! call ctrlp_bdelete#init()
 
@@ -133,6 +136,7 @@ augroup tab_settings
   autocmd FileType php    setlocal shiftwidth=2 tabstop=2 noexpandtab
   autocmd FileType erlang setlocal shiftwidth=4 tabstop=4 softtabstop=4
   autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
+  autocmd FileType go     setlocal shiftwidth=4 tabstop=4 noexpandtab
 augroup END
 
 " use unicode chars for invisibles (like TextMate)
