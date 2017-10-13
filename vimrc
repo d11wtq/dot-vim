@@ -73,6 +73,9 @@ Plugin 'Superbil/llvm.vim'
 " golang syntax
 Plugin 'fatih/vim-go'
 
+" replace regions with g=, g:
+Plugin 'tommcdo/vim-express'
+
 " initialize ctrlp_bdelete
 silent! call ctrlp_bdelete#init()
 
