@@ -148,15 +148,6 @@ set softtabstop=2
 " make backspace behave itself
 set backspace=2
 
-" override tab settings for other languages
-augroup tab_settings
-  autocmd!
-  autocmd FileType php    setlocal shiftwidth=2 tabstop=2 noexpandtab
-  autocmd FileType erlang setlocal shiftwidth=4 tabstop=4 softtabstop=4
-  autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
-  autocmd FileType go     setlocal shiftwidth=4 tabstop=4 noexpandtab
-augroup END
-
 " use unicode chars for invisibles (like TextMate)
 set listchars=tab:▸\ ,eol:¬
 
@@ -196,9 +187,6 @@ nnoremap <Space> :call ToggleMarginIndicator()<CR>
 " tapping <tab> toggles invisibles on/off
 nnoremap <Tab> :set list!<CR>
 
-" clojure prompt
-nmap <Leader>, cqp
-
 " bring up the buffer selection menu in fzf
 nnoremap <C-b> :Buffers<CR>
 
@@ -208,26 +196,11 @@ nnoremap <C-p> :GFiles<CR>
 " open this vimrc with ;/
 nnoremap <Leader>/ :e $MYVIMRC<CR>
 
-" highlight .sh files with bash syntax
-let g:is_bash = 1
-
-" special clojure forms
-let g:clojure_fuzzy_indent_patterns = [
-      \ '^with',
-      \ '^def',
-      \ '^let' ]
-
-" don't limit how far back clojure-static can search
-let g:clojure_maxlines = 10000
-
 " don't limit how far back paredit can search
 let g:paredit_matchlines = 10000
 
 " don't fold markdown on open
 let g:vim_markdown_folding_disabled = 1
-
-" don't do vim-go vim version check
-let g:go_version_warning = 0
 
 " purdy colors
 let g:gruvbox_italic = 0
@@ -235,11 +208,6 @@ let g:gruvbox_contrast_light = 'hard'
 
 set background=light
 silent! colorscheme gruvbox
-
-augroup scheme_settings
-  autocmd!
-  autocmd FileType scheme silent! setlocal lispwords += define
-augroup END
 
 " show or hide the margin indicator
 function! ToggleMarginIndicator()
