@@ -37,8 +37,14 @@ Plugin 'tpope/vim-rails'
 " gruvbox theme
 Plugin 'morhetz/gruvbox'
 
-" php mode stuff
-Plugin 'tobyS/vip'
+" seoul color scheme
+Plugin 'junegunn/seoul256.vim'
+
+" iceberg theme
+Plugin 'cocopon/iceberg.vim'
+
+" onedark theme
+Plugin 'joshdick/onedark.vim'
 
 " erlang mode stuff
 Plugin 'jimenezrick/vimerl'
@@ -49,11 +55,11 @@ Plugin 'bronson/vim-trailing-whitespace'
 " git integration
 Plugin 'tpope/vim-fugitive'
 
-" quick open files
-Plugin 'ctrlpvim/ctrlp.vim'
+" fzf basic integration
+Plugin 'junegunn/fzf'
 
-" buffer management for ctrlp
-Plugin 'd11wtq/ctrlp_bdelete.vim'
+" fzf enhanced integration
+Plugin 'junegunn/fzf.vim'
 
 " clojure syntax handling
 Plugin 'guns/vim-clojure-static'
@@ -67,17 +73,23 @@ Plugin 'vim-scripts/paredit.vim'
 " maniuplate delimited things
 Plugin 'tpope/vim-surround'
 
-" llvm-as syntax handling
-Plugin 'Superbil/llvm.vim'
+" scratch buffer helper
+Plugin 'vim-scripts/scratch.vim'
 
 " golang syntax
 Plugin 'fatih/vim-go'
 
+" javascript syntax support
+Plugin 'pangloss/vim-javascript'
+
+" jsx syntax
+Plugin 'MaxMEllon/vim-jsx-pretty'
+
 " replace regions with g=, g:
 Plugin 'tommcdo/vim-express'
 
-" initialize ctrlp_bdelete
-silent! call ctrlp_bdelete#init()
+" graphql syntax
+Plugin 'jparise/vim-graphql'
 
 " show current line and col in status bar
 set ruler
@@ -133,6 +145,9 @@ set shiftwidth=2
 " soft tabs are 2 spaces
 set softtabstop=2
 
+" make backspace behave itself
+set backspace=2
+
 " override tab settings for other languages
 augroup tab_settings
   autocmd!
@@ -181,32 +196,20 @@ nnoremap <Space> :call ToggleMarginIndicator()<CR>
 " tapping <tab> toggles invisibles on/off
 nnoremap <Tab> :set list!<CR>
 
-" strip all trailing whitespace in the buffer
-nnoremap <Leader><Backspace> :FixWhitespace<CR>
-
 " clojure prompt
 nmap <Leader>, cqp
 
-" bring up the buffer selection menu in ctrlp
-nnoremap <C-b> :CtrlPBuffer<CR>
+" bring up the buffer selection menu in fzf
+nnoremap <C-b> :Buffers<CR>
 
-" open ctrlp with a prompt
-nnoremap <C-f> :CtrlP ./
-
-" clear the ctrlp cache and open ctrlp
-nnoremap <C-@> :CtrlPClearAllCaches<CR>:CtrlP<CR>
+" open fzf with the files list
+nnoremap <C-p> :GFiles<CR>
 
 " open this vimrc with ;/
 nnoremap <Leader>/ :e $MYVIMRC<CR>
 
 " highlight .sh files with bash syntax
 let g:is_bash = 1
-
-" ctrlp doesn't show dotfiles by default
-let g:ctrlp_show_hidden = 1
-
-" hide a few things from ctrlp
-let g:ctrlp_custom_ignore = 'node_modules\|\.git'
 
 " special clojure forms
 let g:clojure_fuzzy_indent_patterns = [
@@ -223,9 +226,14 @@ let g:paredit_matchlines = 10000
 " don't fold markdown on open
 let g:vim_markdown_folding_disabled = 1
 
+" don't do vim-go vim version check
+let g:go_version_warning = 0
+
 " purdy colors
-set background=dark
 let g:gruvbox_italic = 0
+let g:gruvbox_contrast_light = 'hard'
+
+set background=light
 silent! colorscheme gruvbox
 
 augroup scheme_settings
